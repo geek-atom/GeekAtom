@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+			.center {
+				display: -webkit-flex;
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
+			}
+			
+			html,
+			body {
+				background-color: #efeff4;
+				/*background-color: #FFFFFF;*/
+			}
+			
+			.mui-off-canvas-left {
+				color: #fff;
+			}
+			
+			.title {
+				margin: 35px 15px 10px;
+			}
+			
+			.title+.content {
+				margin: 10px 15px 35px;
+				color: #bbb;
+				text-indent: 1em;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			
+			input {
+				color: #000;
+			}
+			
+			.zhifubao-color {
+				background-color: #2684CF;
+			}
+			
+			.mui-title {
+				color: #FFFFFF;
+				font-size: 24px;
+			}
+			
+			.mui-icon {
+				color: #FFFFFF;
+			}
+			
+			.mui-grid-view.mui-grid-9 {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				background-color: #2684CF;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+				margin: 0;
+				padding: 0px;
+				vertical-align: top;
+				border: 0px;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-media .mui-icon {
+				font-size: 1.8em;
+				position: relative;
+			}
+			
+			.mui-icon .mui-badge {
+				font-size: 10px;
+				/* line-height: 1.4; */
+				position: absolute;
+				top: 3px;
+				/* left: 100%; */
+				margin-left: -6px;
+				padding: 1px 5px;
+				color: #fff;
+				background: red;
+			}
+			
+			.order-numbers {
+				display: inline-block;
+				position: absolute;
+				top: -1px;
+				background-color: #f23030;
+				line-height: 12px;
+				font-style: normal;
+				border-radius: 8px;
+				padding: 0 4px;
+				font-size: 8px;
+				color: #fff;
+				right: -2px;
+				border: 1px solid #fff;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: -1px;
+			}
+			
+			.mui-control-content {
+				background-color: white;
+			}
+			
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			.head-photo {
+				margin-top: 30px;
+				width: 120px;
+				height: 120px;
+				border-radius: 120px;
+			}
+			
+			.mui-off-canvas-left,
+			.mui-off-canvas-right {
+				color: #333;
+				background: #fff;
+			}
+			
+			.mui-table-view-inverted {
+				color: #333;
+				background: #fff;
+			}
+			
+			.mui-table-view-inverted .mui-table-view-cell:after {
+				background-color: #2684CF;
+			}
+			
+			.mui-table-view-inverted:after,
+			.mui-table-view-inverted:before {
+				background-color: #2684CF;
+			}
+			
+			.mui-navigate-right:after,
+			.mui-push-left:after,
+			.mui-push-right:after {
+				color: #2684CF;
+			}
+			
+			.mui-table-view-inverted .mui-table-view-cell>a:not(.mui-btn).mui-active {
+				color: #FFFFFF;
+			}
+			
+			.chart {
+				height: 200px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			h5 {
+				margin-top: 30px;
+				font-weight: bold;
+			}
+			
+			h5:first-child {
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content" style="margin-bottom: 20px;">
+							<center>
+								<img class="head-photo" src="img/wulei.jpg" />
+								<div>会飞的🐷</div>
+								<span style="font-size: 12px; ">❤白金会员</span>
+							</center>
+
+						</div>
+
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-shezhi-copy" style="color: #2684CF;">
+										
+									</span> 我的
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-tongzhi" style="color: #2684CF;">
+									
+									</span> 通知
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-xinyong" style="color: #2684CF;">
+									
+									</span> 我的信用
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-table" style="color: #2684CF;">
+									
+									</span> Tax Tables
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-datezhuanhuan" style="color: #2684CF;">
+									
+									</span> Key Tax Dates
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-tips1" style="color: #2684CF;">
+									
+									</span> Tax Tips
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-new" style="color: #2684CF;">
+									
+									</span> News
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="mui-icon iconfont icon-yunxiazai2" style="color: #2684CF;">
+									
+									</span> Recom. Software
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+
+				<header class="mui-bar mui-bar-nav zhifubao-color">
+					<a href="#offCanvasSide" class="mui-icon iconfont icon-gerenzhongxinzhuyegerenziliao  mui-action-menu mui-icon-person mui-pull-left" style="font-size: 16px;"></a>
+					<a class="mui-icon  iconfont icon-menu  mui-pull-right" style="font-size: 16px;">
+						<span class="order-numbers" id="carNum" value="1">1</span>
+					</a>
+					<h1 class="mui-title">急救包大佬版</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content">
+
+					<ul class="mui-table-view mui-grid-view mui-grid-9">
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							<a id="home-map">
+								<span class="mui-icon iconfont icon-saoyisao"></span>
+								<div class="mui-media-body" style="color: white;">附近借款</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							<a id="home-loan">
+								<span class="mui-icon iconfont icon-fukuanma2"></span>
+								<div class="mui-media-body" style="color: white;">我的借款</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							<a id="home-income">
+								<span class="mui-icon iconfont icon-shouqian"></span>
+								<div class="mui-media-body" style="color: orange;">我的收益</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							<a id="home-product">
+								<span class="mui-icon iconfont icon-qiabao"></span>
+								<div class="mui-media-body" style="color: white;">我的产品</div>
+							</a>
+						</li>
+
+					</ul>
+
+					<div class="mui-content-padded">
+
+						<h4 style="color: #000000;margin:30px 0px 30px 0px;">本周收入(元)：<span style="float: right;font-size:30px">5167</span></h5>
+
+						<div class="chart" id="lineChart"></div>
+
+					</div>
+					
+					<ul class="mui-table-view" style="margin-top: 30px;">
+					<li class="mui-table-view-cell">
+		                   <p style="font-size:20px;color: #000000;">即将到期</p>
+		            </li>
+						<li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                     <span style="font-size:20px;color: grey;">本周</span>
+		                    <div style="float: right;margin-right: 20px;">
+													<img style="width: 20px;height: 20px;" src="img/RMB.png" />
+													<span style="color: red;font-size: 24px;">13,000.00</span>
+													
+							</div>
+							<p style="margin-top: 10px;margin-right: 20px;"><span style="color: #67DAE7;float: right;font-size: 16px;">23,400.00</span></p>
+		                </a>
+		            </li>
+		         
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                  <span style="font-size:20px;color: grey;">本月</span>
+		                    <div style="float: right;margin-right: 20px;">
+													<img style="width: 20px;height: 20px;" src="img/RMB.png" />
+													<span style="color: red;font-size: 24px;">231,000.00</span>
+													
+							</div>
+							<p style="margin-top: 10px;margin-right: 20px;"><span style="color: #67DAE7;float: right;font-size: 16px;">23,570.00</span></p>
+		                </a>
+		            </li>
+		        </ul>
+
+					<!-- off-canvas backdrop -->
+					<div class="mui-off-canvas-backdrop"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="libs/echarts-all.js"></script>
+		<script>
+			var getOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+					calculable: false,
+				} : {
+					legend: {
+						data: ['本金', '利息']
+					},
+					grid: {
+						x: 40,
+						x2: 10,
+						y: 30,
+						y2: 25
+					},
+					toolbox: {
+						show: false,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: false
+							},
+							magicType: {
+								show: true,
+								type: ['line']
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+					}],
+					yAxis: [{
+						type: 'value',
+						splitArea: {
+							show: true
+						}
+					}],
+					series: [{
+						name: '本金',
+						type: chartType,
+						data: [20, 49, 256, 767, 1356, 1622, 326, 33]
+					}, {
+						name: '利息',
+						type: chartType,
+						data: [26, 59, 287, 707, 1756, 1822, 487, 23]
+					}]
+				};
+				return chartOption;
+			};
+			var byId = function(id) {
+				return document.getElementById(id);
+			};
+
+			var lineChart = echarts.init(byId('lineChart'));
+			lineChart.setOption(getOption('line'));
+
+		</script>
+		
+		<script>
+			
+			document.getElementById('home-income').addEventListener('tap',function(){
+
+					mui.openWindow({
+					
+						url:'home-income.html',
+						
+						id:'home-income.html'
+					
+					});
+			
+			});
+			document.getElementById('home-map').addEventListener('tap',function(){
+
+					mui.openWindow({
+					
+						url:'home-map.html',
+						
+						id:'home-map.html'
+					
+					});
+			
+			});
+			document.getElementById('home-loan').addEventListener('tap',function(){
+
+					mui.openWindow({
+					
+						url:'home-loan.html',
+						
+						id:'home-loan.html'
+					
+					});
+			
+			});
+			document.getElementById('home-product').addEventListener('tap',function(){
+
+					mui.openWindow({
+					
+						url:'home-product.html',
+						
+						id:'home-product.html'
+					
+					});
+			
+			});
+		</script>
+
+	</body>
+
+</html>

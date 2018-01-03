@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-	
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css" />
 		<style>
-			#circle{
-				width: 100px;
-				height: 100px;
-				border-radius: 100px;
+			#register,
+			#start {
+				border-radius: 10px;
+				width: 120px;
+				height: 35px;
+				margin: 5px;
+				border-color: #000000;
 			}
 		</style>
 	</head>
-	<body>
+
+	<body style="background-color: #FFFFFF;">
 		<center>
-			<img id="circle" src="http://www.qqzhi.com/uploadpic/2015-01-22/022222987.jpg"/>
+			<img src="img/splash.jpg" style="width: 100%;margin-top: 40px;padding: 60px;" />
+
+			<div class="mui-row">
+				<button id="start" type="button" class="mui-btn">
+					立即开启
+				</button>
+			</div>
+			<div class="mui-row">
+				<button id="register" type="button" class="mui-btn">
+					注册
+			</button>
+			</div>
 		</center>
+
 	</body>
+
+	<script type="text/javascript" src="js/mui.min.js"></script>
+	<script>
+		document.getElementById('start').addEventListener('tap', function() {
+
+			mui.openWindow({
+
+				url: 'home-map.html',
+
+				id: 'home-map.html'
+
+			});
+
+		});
+	</script>
+
 </html>

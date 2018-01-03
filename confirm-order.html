@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			#bg-orange {
+				height: 106px;
+				background: -webkit-linear-gradient(left, #FD8E25, #FC541F);
+				/* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(right, #FD8E25, #FC541F);
+				/* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(right, #FD8E25, #FC541F);
+				/* Firefox 3.6 - 15 */
+				background: linear-gradient(to right, #FD8E25, #FC541F);
+				/* 标准的语法（必须放在最后） */
+			}
+			
+			.icon-star1,.icon-starhalfempty{
+				color: orange;
+				font-size: 16px;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 60px;
+				max-width: 60px;
+				height: 60px;
+				border-radius: 60px;
+			}
+			
+			.tab tr:nth-child(even) {
+				background: #FFF
+			}
+			
+			.tab tr:nth-child(odd) {
+				background: #F9F9F9
+			}
+			
+			td {
+				padding: 8px;
+				font-size: 16px;
+				color: #666666;
+			}
+			
+			.icon-male3{
+				color: #87CEFF
+			}
+			
+			html,
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;"> 
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">申请详情</h1>
+		</header>
+		<div class="mui-content">
+			<div id="bg-orange">
+				<div style="padding: 20px;">
+					<span style="font-size: 24px;color: white;">等待确认</span>
+
+					<span style="color: white;font-size: 24px;float: right;">¥ 22,000.00</span>
+
+				</div>
+				<div style="padding: 0px 20px  20px 20px;">
+					<span style="font-size: 14px;color: white;">还剩20小时自动失效</span>
+
+					<span style="color: #67DAE7;font-size: 14px;float: right;">23,400.00</span>
+				</div>
+			</div>
+			
+			
+			
+
+			<ul class="mui-table-view" style="padding: 10px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/wulei.jpg">
+						<div class="mui-media-body">
+							PAUL<span class="iconfont icon-male3" style="margin-left: 2px;"></span>
+							<p class="mui-ellipsis">平台借款
+								<span style="color: orange;font-size: 20px;">
+									35
+								</span> 次
+								<span class="iconfont icon-star1"></span>
+								<span class="iconfont icon-star1"></span>
+								<span class="iconfont icon-star1"></span>
+								<span class="iconfont icon-star1"></span>
+								<span class="iconfont icon-starhalfempty"></span>
+
+							</p>
+							<p>上海 | 浦东</p>
+
+						</div>
+					</a>
+
+				</li>
+
+			</ul>
+
+			<table class="tab" cellspacing="0" cellpadding="10" width="100%">
+				<tr>
+					<td style="width: 8%;">
+						<span class="iconfont icon-date"></span>
+					</td>
+					<td>起始日</td>
+					<td></td>
+					<td style="text-align: right;">2017-11-01</td>
+				</tr>
+				<tr>
+					<td style="width: 8%;">
+						<span class="iconfont icon-date"></span>
+					</td>
+					<td>到期日</td>
+					<td></td>
+					<td style="text-align: right;">2018-02-15</td>
+				</tr>
+				<tr>
+
+					<td style="width: 8%;">
+						<span class="iconfont icon-xunhuan"></span>
+					</td>
+					<td>贷款周期</td>
+					<td></td>
+					<td style="text-align: right;">100天</td>
+				</tr>
+				<tr>
+
+					<td style="width: 8%;">
+						<span class="iconfont icon-jine"></span>
+					</td>
+					<td>借款金额</td>
+					<td></td>
+					<td style="text-align: right;">10000.00</td>
+				</tr>
+				<tr>
+
+					<td style="width: 8%;">
+						<span class="iconfont icon-jine"></span>
+					</td>
+					<td>到期利息</td>
+					<td></td>
+					<td style="text-align: right;">1000.00</td>
+				</tr>
+				<tr>
+
+					<td style="width: 8%;">
+						<span class="iconfont icon-leixing1"></span>
+					</td>
+					<td>申请类型</td>
+					<td></td>
+					<td style="text-align: right;">信用贷</td>
+				</tr>
+				<tr>
+
+					<td style="width: 8%;">
+						<span class="iconfont icon-date"></span>
+					</td>
+					<td>申请日期</td>
+					<td></td>
+					<td style="text-align: right;">2017-10-13</td>
+				</tr>
+			</table>
+			<center>
+				<button id="confirmOrderBtn" type="button" class="mui-btn mui-btn-warning mui-btn-block mui-btn-outlined" style="color: orangered;width: 90%;margin-top: 30px;border-radius: 10px;">确认</button>
+
+			</center>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			document.getElementById('confirmOrderBtn').addEventListener('tap', function() {
+
+			mui.openWindow({
+
+				url: 'home-loan.html',
+
+				id: 'home-loan.html'
+
+			});
+
+		});
+		</script>
+	</body>
+
+</html>
